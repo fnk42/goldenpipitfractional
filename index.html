@@ -260,12 +260,13 @@ section{padding:80px 32px}
   font-size:14px;font-weight:600;transition:border-color .15s,color .15s;
 }
 .prem-btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
-/* STACK SCENE */
-.stack-scene{position:relative;max-width:820px;margin:0 auto 56px;height:420px;}
-.stack-card{position:absolute;width:100%;border-radius:14px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5);}
-.stack-card-3{background:#070f1a;top:28px;left:20px;width:calc(100% - 40px);z-index:1;}
-.stack-card-2{background:#0a1622;top:14px;left:10px;width:calc(100% - 20px);z-index:2;}
-.stack-card-1{background:#0F1C2E;top:0;left:0;z-index:3;border:1px solid rgba(245,166,35,0.25);}
+/* GLOW WRAP */
+.glow-wrap{position:relative;max-width:820px;margin:0 auto 56px;}
+.glow-wrap::before{content:'';position:absolute;top:10%;left:10%;right:10%;bottom:0;background:radial-gradient(ellipse at 50% 60%, rgba(245,166,35,0.35) 0%, rgba(245,166,35,0.12) 40%, transparent 70%);pointer-events:none;z-index:0;border-radius:50%;}
+.glow-wrap::after{content:'';position:absolute;inset:-2px;background:radial-gradient(ellipse at 50% 100%, rgba(245,166,35,0.18) 0%, transparent 60%);pointer-events:none;z-index:0;}
+.stack-scene{position:relative;z-index:1;}
+.stack-card{border-radius:14px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(245,166,35,0.15);}
+.stack-card-1{background:#0F1C2E;border:1.5px solid rgba(245,166,35,0.35);}
 /* ═══ END PREMIUM SECTION ═══ */
 
 /* PRICING */
@@ -525,93 +526,36 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);padding
     <h2 class="premium-heading">Your profile, delivered as a <em>premium experience.</em></h2>
     <p class="premium-subhead">Every client receives a private, personalised optimisation report — a beautifully designed interactive site with section-by-section guidance, copyable LinkedIn text, and a live CV. This is what it looks like.</p>
 
-    <!-- BROWSER PREVIEW — STACK -->
-    <div class="stack-scene">
-      <!-- Card 3 — back -->
-      <div class="stack-card stack-card-3">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
-          <div class="browser-url" style="opacity:.4"><span>https://</span>goldenpipitcareers.com/reports/...</div>
-        </div>
-        <div class="report-preview" style="opacity:.35">
-          <div class="rp-top">
-            <div class="rp-avatar"></div>
-            <div><div class="rp-name" style="opacity:.5">Previous report</div></div>
+    <!-- BROWSER PREVIEW — GLOW -->
+    <div class="glow-wrap">
+      <div class="stack-scene">
+        <div class="stack-card stack-card-1">
+          <div class="browser-bar">
+            <div class="browser-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+            <div class="browser-url"><span>https://</span>goldenpipitcareers.com/reports/mary-wanjiru-kamau</div>
           </div>
-        </div>
-      </div>
-      <!-- Card 2 — mid -->
-      <div class="stack-card stack-card-2">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
-          <div class="browser-url" style="opacity:.6"><span>https://</span>goldenpipitcareers.com/reports/...</div>
-        </div>
-        <div class="report-preview" style="opacity:.55">
-          <div class="rp-top">
-            <div class="rp-avatar"></div>
-            <div><div class="rp-name">Another client</div><div class="rp-role">CFO · Finance Director</div></div>
-          </div>
-        </div>
-        <div class="rp-sections">
-          <div class="rp-row" style="opacity:.5">
-            <div class="rp-num">01</div>
-            <div class="rp-body"><div class="rp-title">Headline</div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div>
-          </div>
-          <div class="rp-row" style="opacity:.5">
-            <div class="rp-num">02</div>
-            <div class="rp-body"><div class="rp-title">About / Summary</div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Card 1 — front (full detail) -->
-      <div class="stack-card stack-card-1">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
-          <div class="browser-url"><span>https://</span>goldenpipitcareers.com/reports/mary-wanjiru-kamau</div>
-        </div>
-        <div class="report-preview">
-          <div class="rp-top">
-            <div class="rp-avatar">
-              <img src="https://fnk42.github.io/maureen-wanja-optimisation/images/maureen.jpg" alt="Mary Wanjiru Kamau" onerror="this.style.display='none'"/>
-            </div>
-            <div>
-              <div class="rp-name">Mary Wanjiru Kamau</div>
-              <div class="rp-role">Executive Assistant — LinkedIn Optimisation Report</div>
-              <div class="rp-badges">
-                <span class="rp-badge">Ref PO-120</span>
-                <span class="rp-badge">April 2026</span>
-                <span class="rp-badge">Awaiting feedback</span>
+          <div class="report-preview">
+            <div class="rp-top">
+              <div class="rp-avatar">
+                <img src="https://fnk42.github.io/maureen-wanja-optimisation/images/maureen.jpg" alt="Mary Wanjiru Kamau" onerror="this.style.display='none'"/>
+              </div>
+              <div>
+                <div class="rp-name">Mary Wanjiru Kamau</div>
+                <div class="rp-role">Executive Assistant — LinkedIn Optimisation Report</div>
+                <div class="rp-badges">
+                  <span class="rp-badge">Ref PO-120</span>
+                  <span class="rp-badge">April 2026</span>
+                  <span class="rp-badge">Awaiting feedback</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="rp-sections">
-          <div class="rp-row">
-            <div class="rp-num">01</div>
-            <div class="rp-body"><div class="rp-title">Headline</div><div class="rp-preview"><strong>→ Executive Assistant | Calendar &amp; Stakeholder Management | Nairobi</strong></div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div>
-          </div>
-          <div class="rp-row">
-            <div class="rp-num">02</div>
-            <div class="rp-body"><div class="rp-title">About / Summary</div><div class="rp-preview">Full first-person narrative — hook, evidence, aspiration, CTA. One-click copy.</div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div>
-          </div>
-          <div class="rp-row">
-            <div class="rp-num">03–06</div>
-            <div class="rp-body"><div class="rp-title">Experience — 4 roles fully rewritten</div><div class="rp-preview">Company intro + achievement-led bullets. <strong>Quantified outcomes preserved.</strong></div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill h">High</span></div>
-          </div>
-          <div class="rp-row">
-            <div class="rp-num">07</div>
-            <div class="rp-body"><div class="rp-title">Skills — pinned &amp; prioritised</div><div class="rp-preview">Top 3 to pin, additions list, removals — tagged and ready to act on.</div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill h">High</span></div>
-          </div>
-          <div class="rp-row">
-            <div class="rp-num">08–11</div>
-            <div class="rp-body"><div class="rp-title">Education · Banner · Recommendations · Content</div><div class="rp-preview">Complete presence strategy with rationale for every recommendation.</div></div>
-            <div class="rp-pill-wrap"><span class="rp-pill q">Quick win</span></div>
+          <div class="rp-sections">
+            <div class="rp-row"><div class="rp-num">01</div><div class="rp-body"><div class="rp-title">Headline</div><div class="rp-preview"><strong>→ Executive Assistant | Calendar &amp; Stakeholder Management | Nairobi</strong></div></div><div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div></div>
+            <div class="rp-row"><div class="rp-num">02</div><div class="rp-body"><div class="rp-title">About / Summary</div><div class="rp-preview">Full first-person narrative — hook, evidence, aspiration, CTA. One-click copy.</div></div><div class="rp-pill-wrap"><span class="rp-pill c">Critical</span></div></div>
+            <div class="rp-row"><div class="rp-num">03–06</div><div class="rp-body"><div class="rp-title">Experience — 4 roles fully rewritten</div><div class="rp-preview">Company intro + achievement-led bullets. <strong>Quantified outcomes preserved.</strong></div></div><div class="rp-pill-wrap"><span class="rp-pill h">High</span></div></div>
+            <div class="rp-row"><div class="rp-num">07</div><div class="rp-body"><div class="rp-title">Skills — pinned &amp; prioritised</div><div class="rp-preview">Top 3 to pin, additions list, removals — tagged and ready to act on.</div></div><div class="rp-pill-wrap"><span class="rp-pill h">High</span></div></div>
+            <div class="rp-row"><div class="rp-num">08–11</div><div class="rp-body"><div class="rp-title">Education · Banner · Recommendations · Content</div><div class="rp-preview">Complete presence strategy with rationale for every recommendation.</div></div><div class="rp-pill-wrap"><span class="rp-pill q">Quick win</span></div></div>
           </div>
         </div>
       </div>
