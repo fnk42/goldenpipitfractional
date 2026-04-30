@@ -33,25 +33,27 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
 /* HERO */
 .hero{padding:80px 32px 72px;max-width:860px;margin:0 auto;text-align:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);color:var(--gold-dark);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:24px}. .shift-happens {
-  font-size: 16px;
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);color:var(--gold-dark);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:24px}. 
+  .shift-happens {
+  font-size: clamp(36px, 5vw, 64px);
   font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.18em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   color: var(--gold);
-  margin-bottom: 18px;
-  text-transform: none;
+  margin-bottom: 16px;
+  line-height: 1.1;
 }
 .shift-happens::after {
   content: '';
   display: block;
-  width: 36px;
-  height: 2px;
+  width: 56px;
+  height: 3px;
   background: var(--gold);
-  margin: 10px auto 0;
-  opacity: 0.6;
+  margin: 12px auto 0;
+  opacity: 0.7;
   border-radius: 2px;
-}hero h1{font-size:clamp(36px,5vw,56px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--dark);margin-bottom:20px}
+}
+  hero h1{font-size:clamp(36px,5vw,56px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--dark);margin-bottom:20px}
 .hero h1 span{color:var(--gold)}
 .hero p{font-size:18px;color:var(--muted);max-width:580px;margin:0 auto 40px;line-height:1.7}
 .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
