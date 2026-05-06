@@ -308,15 +308,19 @@
   }
   .card-top { display: flex; align-items: center; gap: 14px; }
   .avatar {
-    width: 44px; height: 44px;
+    width: 88px; height: 88px;
     border-radius: 50%;
     background: var(--navy);
     color: var(--gold-light);
     display: flex; align-items: center; justify-content: center;
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 19px;
+    font-size: 36px;
     flex-shrink: 0;
+    object-fit: cover;
+  }
+  img.avatar {
+    background: none;
   }
   .avatar.placeholder {
     background: rgba(15, 28, 46, 0.08);
@@ -969,7 +973,7 @@
         <!-- HAMADI -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">H</div>
+            <img src="images/hamadi.jpg" alt="Hamadi Asli" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>H</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Hamadi Asli</span> <span class="check">✓</span></div>
               <div class="handle">ex-Deloitte &middot; Fintech &amp; payments</div>
@@ -986,7 +990,7 @@
         <!-- VITOR SALES -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">V</div>
+            <img src="images/vitor.jpg" alt="Vitor Sales" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>V</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Vitor Sales</span> <span class="check">✓</span></div>
               <div class="handle">ex-Monitor Deloitte &middot; Product Ops</div>
@@ -1003,7 +1007,7 @@
         <!-- LEONARDO MARTINS -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">L</div>
+            <img src="images/leonardo.jpg" alt="Leonardo Martins" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>L</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Leonardo Martins</span> <span class="check">✓</span></div>
               <div class="handle">ex-Bain &middot; Applied AI</div>
@@ -1020,7 +1024,7 @@
         <!-- TRI VO -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">T</div>
+            <img src="images/tri.jpg" alt="Tri Vo" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>T</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Tri Vo</span> <span class="check">✓</span></div>
               <div class="handle">ex-ARC Group &middot; Intl Affairs</div>
@@ -1037,7 +1041,7 @@
         <!-- MOHAMEDREZA KALYAN -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">M</div>
+            <img src="images/mohamedreza.jpg" alt="Mohamedreza Kalyan" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>M</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Mohamedreza Kalyan</span> <span class="check">✓</span></div>
               <div class="handle">ex-Kearney &middot; Telco Strategy</div>
@@ -1054,7 +1058,7 @@
         <!-- JOHN NDUNGU -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">J</div>
+            <img src="images/john.jpg" alt="John Ndungu" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>J</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">John Ndungu</span> <span class="check">✓</span></div>
               <div class="handle">McKinsey Forward &middot; Finance & Data</div>
@@ -1071,7 +1075,7 @@
         <!-- JESUTOFUNMI OGUNTOYE -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">J</div>
+            <img src="images/jesutofunmi.jpg" alt="Jesutofunmi Oguntoye" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>J</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Jesutofunmi Oguntoye</span> <span class="check">✓</span></div>
               <div class="handle">ex-McKinsey &middot; M&A</div>
@@ -1088,7 +1092,7 @@
         <!-- FERNANDA MACIEL -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">F</div>
+            <img src="images/fernanda.jpg" alt="Fernanda Maciel" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>F</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Fernanda Maciel</span> <span class="check">✓</span></div>
               <div class="handle">ex-EY-Parthenon &middot; M&A</div>
@@ -1105,7 +1109,7 @@
         <!-- CHAN KYUNG KIM -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">C</div>
+            <img src="images/chan.jpg" alt="Chan Kyung Kim" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>C</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Chan Kyung Kim</span> <span class="check">✓</span></div>
               <div class="handle">ex-Bain &middot; UN Advisory</div>
@@ -1122,7 +1126,7 @@
         <!-- CAIQUE PEIXOTO -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">C</div>
+            <img src="images/caique.jpg" alt="Caique Peixoto" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>C</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Caique Peixoto</span> <span class="check">✓</span></div>
               <div class="handle">ex-EY-Parthenon &middot; IT Strategy</div>
@@ -1139,7 +1143,7 @@
         <!-- ENIOLUWA AWOPEJO -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">E</div>
+            <img src="images/enioluwa.jpg" alt="Enioluwa Awopejo" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>E</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Enioluwa Awopejo</span> <span class="check">✓</span></div>
               <div class="handle">ex-PwC &middot; Infrastructure Finance</div>
@@ -1156,7 +1160,7 @@
         <!-- WAMBUI NJOGU -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">W</div>
+            <img src="images/wambui.jpg" alt="Wambui Njogu" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>W</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Wambui Njogu</span> <span class="check">✓</span></div>
               <div class="handle">ex-Deloitte East Africa &middot; Strategy</div>
@@ -1173,7 +1177,7 @@
         <!-- NADIA PRAMESWARY -->
         <article class="transition-card">
           <div class="card-top">
-            <div class="avatar">N</div>
+            <img src="images/nadia.jpg" alt="Nadia Prameswary" class="avatar" onerror="this.outerHTML='<div class=\'avatar\'>N</div>'">
             <div class="card-id">
               <div class="name-row"><span class="name">Nadia Prameswary</span> <span class="check">✓</span></div>
               <div class="handle">Deloitte Indonesia &middot; Corp Dev</div>
@@ -1346,7 +1350,7 @@
         <a href="https://calendly.com/felix-goldenpipitrecruiting/fractional-support-discovery-call" target="_blank" rel="noopener" class="cta">Book a discovery call</a>
       </div>
       <p style="font-family: var(--sans); font-size: 13px; color: var(--navy-deep); opacity: 0.6; margin-top: 24px;">
-        Or reach us directly: <a href="mailto:felix@goldenpipitrecruiting.com" style="color: var(--navy); text-decoration: underline;">felix@goldenpipitrecruiting.com</a> &middot; <a href="tel:+254726178216" style="color: var(--navy); text-decoration: underline;">+254 726 178 216</a>
+        Or reach us directly: <a href="mailto:info@goldenpipitrecruiting.com" style="color: var(--navy); text-decoration: underline;">felix@goldenpipitrecruiting.com</a> &middot; <a href="tel:+254726178216" style="color: var(--navy); text-decoration: underline;">+254 726 178 216</a>
       </p>
     </div>
   </section>
@@ -1354,7 +1358,7 @@
   <footer class="site">
     <div class="container footer-row">
       <div>GP Fractional &middot; A practice of Golden Pipit Group</div>
-      <div>felix@goldenpipitrecruiting.com &middot; +254 726 178 216</div>
+      <div>info@goldenpipitrecruiting.com &middot; +254 726 178 216</div>
       <div>View Park Towers, Suite 1 &middot; Utalii Street, Nairobi</div>
     </div>
   </footer>
